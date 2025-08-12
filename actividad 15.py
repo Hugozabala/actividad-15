@@ -11,6 +11,8 @@ def menu():
 class Repartidor:
     def __init__(self, nombre, paquetes, zona):
 
+
+
         self.nombre = nombre
         self.paquetes = paquetes
         self.zona = zona
@@ -80,7 +82,7 @@ op=0
 while op!=6:
     menu()
 
-    op=int(input("ingrese una opcion aejecutar"))
+    op=int(input("ingrese una opcion a ejecutar"))
     match op:
             case 1:
 
@@ -97,7 +99,7 @@ while op!=6:
                             empresa.agregar_repartidor(repartidor)
                             print("ingresado con exito")
                      except ValueError as e:
-                            print(f"Error al ingresar datos: {e}")
+                            print(f"Error al ingresar datos ")
 
             case 2:
                   print("\n--- Registro Original ---")
