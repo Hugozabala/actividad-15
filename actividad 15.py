@@ -81,9 +81,10 @@ empresa = EmpresaMensajeria()
 op=0
 while op!=6:
     menu()
+    try:
 
-    op=int(input("ingrese una opcion a ejecutar"))
-    match op:
+        op=int(input("ingrese una opcion a ejecutar"))
+        match op:
             case 1:
 
                 cantidad = int(input("¿Cuántos repartidores desea ingresar? (numero entero ejp. 1"))
@@ -105,6 +106,7 @@ while op!=6:
                   print("\n--- Registro Original ---")
                   for r in empresa.repartidores:
                      print(r)
+                     print("precione enter para regresr a menu principal")
 
             case 3:
                  print("repartidores ordenados por paquete")
@@ -130,3 +132,5 @@ while op!=6:
                 print("ingrese una opcion valida")
 
 
+    except ValueError :
+        print("ingrese un numero entero")
