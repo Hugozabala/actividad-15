@@ -1,11 +1,11 @@
 def menu():
     print("=======menu principal======")
     print("1. precione (# 1)ingrese cuantos repartidores desea ingresar (numero entero ejp: 1) ")
-    print("2. precione(#2)mostrar registro original")
-    print("3. ordenar repartidores mostrar posicion")
-    print("4. buscar por nombre si aparece en lista")
-    print("5. mostrar estadistica general")
-    print("6. salir")
+    print("2. precione(# 2) mostrar registro original")
+    print("3. precione(# 3) ordenar repartidores mostrar posicion")
+    print("4. precione(# 4)buscar por nombre si aparece en lista")
+    print("5. precione(# 5)mostrar estadistica general")
+    print("6. precione(# 6)salir")
 
 
 class Repartidor:
@@ -84,7 +84,7 @@ while op!=6:
     match op:
             case 1:
 
-                cantidad = int(input("¿Cuántos repartidores desea ingresar? "))
+                cantidad = int(input("¿Cuántos repartidores desea ingresar? (numero entero ejp. 1"))
 
                 for i in range(cantidad):
                      print(f"\nRepartidor #{i + 1}")
@@ -95,6 +95,7 @@ while op!=6:
 
                             repartidor = Repartidor(nombre, paquetes, zona)
                             empresa.agregar_repartidor(repartidor)
+                            print("ingresado con exito")
                      except ValueError as e:
                             print(f"Error al ingresar datos: {e}")
 
@@ -104,6 +105,7 @@ while op!=6:
                      print(r)
 
             case 3:
+                 print("repartidores ordenados por paquete")
                  empresa.ordenar_por_paquetes()
 
             case 4:
@@ -118,6 +120,8 @@ while op!=6:
             case 5:
                  empresa.estadisticas()
             case 6:
+                if op==6:
+                    print("esta seguro salir de programa")
                 print("fin de programa ")
 
             case _:
